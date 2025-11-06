@@ -1,0 +1,1 @@
+# dns-record-configuration
