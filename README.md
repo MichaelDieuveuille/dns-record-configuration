@@ -25,11 +25,14 @@
 </ol>
 
 <h2>Actions and Observations</h2>
-<p><img src="https://i.imgur.com/DJmEXEB.png" width="80%" alt="DNS Manager A Records"/></p>
+<img width="2559" height="1292" alt="Screenshot 2025-11-07 112630" src="https://github.com/user-attachments/assets/7881ad87-118b-4da9-9963-99baa5b8fc35" />
+
 <p>A-records successfully created for multiple internal hosts.</p>
 
-<p><img src="https://i.imgur.com/DJmEXEB.png" width="80%" alt="CNAME Aliases"/></p>
+<img width="2559" height="1293" alt="Screenshot 2025-11-07 112912" src="https://github.com/user-attachments/assets/a0d7fc80-d52e-4021-b6f6-fcc1d6ff15cf" />
+
 <p>CNAME records allowed alternative hostnames for easy access.</p>
 
-<p><img src="https://i.imgur.com/DJmEXEB.png" width="80%" alt="nslookup Test"/></p>
+<img width="2559" height="1217" alt="Screenshot 2025-11-07 112942" src="https://github.com/user-attachments/assets/35467e41-d383-4858-9f4f-6651ad6cfeb7" />
+
 <p><code>nslookup</code> verified accurate name resolution across both record types.</p>
