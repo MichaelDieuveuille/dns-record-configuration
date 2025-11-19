@@ -50,6 +50,9 @@ Now, return to Client1 and try pinging "mainframe" in PowerShell again. This tim
 
 <img width="756" height="526" alt="DNS 6" src="https://github.com/user-attachments/assets/ff14b1b3-f59d-4679-8621-45206d0a78ba" />
 <img width="858" height="296" alt="DNS 7" src="https://github.com/user-attachments/assets/4b8cc84f-5db2-4b5e-ae30-815c83b6e187" />
+<P>
+  
+</P>
 Now, go back to DC-1 and update the DNS A-record for "mainframe" to point to the IP address 8.8.8.8. After making this change, return to the Client1 VM and ping "mainframe" again. You'll notice it still pings the old IP address.
 
 
