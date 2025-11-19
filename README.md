@@ -49,28 +49,29 @@ Now, return to Client1 and try pinging "mainframe" in PowerShell again. This tim
 
 
 <img width="756" height="526" alt="DNS 6" src="https://github.com/user-attachments/assets/ff14b1b3-f59d-4679-8621-45206d0a78ba" />
-
+<img width="858" height="296" alt="DNS 7" src="https://github.com/user-attachments/assets/4b8cc84f-5db2-4b5e-ae30-815c83b6e187" />
 Now, go back to DC-1 and update the DNS A-record for "mainframe" to point to the IP address 8.8.8.8. After making this change, return to the Client1 VM and ping "mainframe" again. You'll notice it still pings the old IP address.
 
-<img width="858" height="296" alt="DNS 7" src="https://github.com/user-attachments/assets/4b8cc84f-5db2-4b5e-ae30-815c83b6e187" />
-
-
-Use the command ipconfig /displaydns on Client1 and locate the entry for "mainframe." You'll see that the A-record still points to 10.0.0.4, providing a more detailed view of the cached DNS entry.
 
 <img width="859" height="604" alt="DNS 8" src="https://github.com/user-attachments/assets/dbaf8b20-a236-4fd6-b0d3-bf2e45d8b6d6" />
 
 
-To ensure that the new IP address from the updated A-record is reflected, use the command ipconfig /flushdns to clear the DNS cache. The new IP address will be shown when you use ipconfig /displaydns.
 
+Use the command ipconfig /displaydns on Client1 and locate the entry for "mainframe." You'll see that the A-record still points to 10.0.0.4, providing a more detailed view of the cached DNS entry.
 <img width="879" height="227" alt="DNS 9" src="https://github.com/user-attachments/assets/0accc309-3796-484c-b5bb-39b4b84fba0e" />
 
-Now, attempt to ping "mainframe" one more time from Client1. You'll notice that it successfully pings the new IP address 8.8.8.8, reflecting the updated A-record.
+
+To ensure that the new IP address from the updated A-record is reflected, use the command ipconfig /flushdns to clear the DNS cache. The new IP address will be shown when you use ipconfig /displaydns.
 
 <img width="874" height="315" alt="DNS 10" src="https://github.com/user-attachments/assets/27eb52bb-2e31-4980-b8fb-546757c68700" />
 
-Next, go back to the DC-1 VM and create a CNAME record that points the host "explore" to "www.google.com". To do this, navigate to the DNS Manager, right-click mydomain.com under Forward Lookup Zones, and select New Alias (CNAME). In the Alias name field, enter explore, and in the Fully Qualified Domain Name (FQDN) field, enter www.google.com. Save the record.
+Now, attempt to ping "mainframe" one more time from Client1. You'll notice that it successfully pings the new IP address 8.8.8.8, reflecting the updated A-record.
 
 <img width="757" height="523" alt="DNS 11" src="https://github.com/user-attachments/assets/9f0cfc03-043b-4e7b-ac3f-8f2477da0b1c" />
+
+Next, go back to the DC-1 VM and create a CNAME record that points the host "explore" to "www.google.com". To do this, navigate to the DNS Manager, right-click mydomain.com under Forward Lookup Zones, and select New Alias (CNAME). In the Alias name field, enter explore, and in the Fully Qualified Domain Name (FQDN) field, enter www.google.com. Save the record.
+
+<img width="868" height="303" alt="DNS 12" src="https://github.com/user-attachments/assets/df741a6d-a3c4-4e80-9122-7775f0982e84" />
 
 
 Go back to the Client1 VM and ping "explore." You should observe that the ping is successfully resolved to www.google.com, as the CNAME record you created points "explore" to that address.
